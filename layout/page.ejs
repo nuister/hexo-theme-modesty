@@ -1,0 +1,13 @@
+<% if(page.type === 'tags') { %>
+    <h2>当前共有<%- site.tags.length%>个标签</h2>
+    <div class="tag-cloud__single">
+    <%- tagcloud({min_font: 12, max_font: 30, amount: 200, color: true, start_color: '#f60', end_color: '#333'}) %>
+    </div>
+<% return; %>
+<% } %>
+<% if(page.type === 'about') { %>
+<%- partial('_partial/mobile-about', {post: page, index: false}) %>
+<% return; %>
+<% } else { %>
+<%- partial('_partial/article', {post: page, index: false}) %>
+<% } %>

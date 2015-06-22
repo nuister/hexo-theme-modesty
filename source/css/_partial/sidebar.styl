@@ -1,0 +1,116 @@
+.sidebar{
+  display: none;
+  width: 0;
+  position: fixed;
+  padding: 48px 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background: #333333;
+  z-index: 999;
+  color: #FFFFFF;
+  box-shadow: inset -3px -3px 10px rgba(51, 51, 51, 0.35);
+  // background: url("/modesty/source/img/sidebar-bg.jpg") no-repeat;
+  &>div{
+    h5{
+      margin 0.2em 0
+      color #999999
+    }
+  }
+  .tags-wrap{
+    a{
+      background-color: rgba(0, 0, 0, 0.5);
+      font-size: 12px!important;
+      color: #fff;
+      padding: 4px;
+      border-radius: 3px;
+      margin: 0 4px 0 0;
+      border-bottom: 0;
+      transition: all 0.2s ease-in-out;
+      &:hover{
+        border: 0;
+        background-color: #333;
+      }
+    }
+  }
+}
+
+.ts{
+  text-shadow: 0 0 20px #333;
+  color: #fff;
+}
+
+.profile{
+  text-align: center;
+}
+
+.profile__avatar{
+
+}
+
+.profile__avatar__img{
+  width: 96px;
+  height: 96px;
+  border: 2px #fff solid;
+  border-radius: 50%;
+}
+
+.profile__name{
+  display: block;
+  font-size: 18pt;
+}
+
+.profile__sign{
+  margin: 20px 0;
+  display: inline-block;
+}
+
+.social{
+  margin: 30px 0;
+}
+
+.social__item{
+  margin: 0 3px;
+  @media mq-tablet{
+    font-size: 20px;
+  }
+@media mq-mobile{
+font-size: 20px;
+}
+  a{
+    border-bottom: none;
+    text-align: center;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border-radius(12px);
+    background: #fff;
+    transition: all 0.2s ease-in-out;
+    &:hover{
+      text-decoration: none;
+      border-bottom: none;
+      color: #fff;
+      background: #333;
+      @media mq-tablet{
+        color: #5b5b5b;
+        background: #FFFFFF;
+      }
+      @media mq-mobile{
+        color: #5b5b5b;
+        background: #FFFFFF;
+      }
+    }
+  }
+}
+
+.tags-wrap{
+  margin: 40px 0;
+}
+
+.tags__item{
+
+}
+
+  .aboutme-wrap{
+    font-size: 12px
+  }

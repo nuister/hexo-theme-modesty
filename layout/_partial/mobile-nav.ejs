@@ -1,0 +1,18 @@
+<header id="mobile-nav">
+    <div class="mobile-nav__inner">
+        <a class="mn-inner__logo alignleft nb" href="/"><%=theme.author%></a>
+        <div class="mn-inner__menu alignright">
+            <a class="nb" href="javascript:;">
+                <span class="fa fa-reorder"></span>
+            </a>
+        </div>
+    </div>
+    <div class="mobile-nav__wrap hide">
+        <ul class="mobile-nav__list">
+            <% for (var i in theme.menu){ %>
+            <li><a class="nb" href="<%- url_for(theme.menu[i]) %>"><%= i %></a></li>
+            <%}%>
+            <li><a class="nb" href="/about">About me</a></li>
+        </ul>
+    </div>
+</header>

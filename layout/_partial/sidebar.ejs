@@ -1,0 +1,32 @@
+<div class="profile">
+    <div class="profile__avatar delay">
+        <img class="profile__avatar__img" src="<%=theme.avatar%>" alt="头像"/>
+    </div>
+    <span class="profile__name ts delay"><%=theme.author%></span>
+    <% if (theme.subtitle){ %>
+        <span class="profile__sign ts delay"><%=theme.subtitle%></span>
+    <%}%>
+</div>
+<div class="social tc delay">
+    <% for (var i in theme.subnav){ %>
+        <span class="social__item">
+            <a href="<%- url_for(theme.subnav[i]) %>" target="_blank" title="<%= i %>">
+                <span class="fa fa-<%= i %>"></span>
+            </a>
+        </span>
+    <%}%>
+</div>
+<%if(theme.tagcloud){%>
+<div class="tags-wrap delay">
+    <h5 class="tc ts">TAGS</h5>
+    <%- tagcloud() %>
+</div>
+<%}%>
+<%if(theme.aboutme){%>
+<div class="aboutme-wrap delay">
+    <h5 class="tc ts">ABOUT ME</h5>
+    <span>
+        <%=theme.aboutme%>
+    </span>
+</div>
+<% } %>

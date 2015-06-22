@@ -1,0 +1,17 @@
+<!--导航 start-->
+<nav id="navigation">
+    <div class="side-trigger">
+        <img src="<%=theme.avatar%>" alt="头像"/>
+    </div>
+    <ul class="navigation">
+        <% for (var i in theme.menu){ %>
+            <li><a class="nb" href="<%- url_for(theme.menu[i]) %>"><%= i %></a></li>
+        <%}%>
+    </ul>
+    <div class="back-wrap tc">
+        <a class="back-to-top nb" href="javascript:;">
+            <span class="fa fa-chevron-up"></span>
+        </a>
+    </div>
+</nav>
+<!--导航 end-->

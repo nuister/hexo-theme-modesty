@@ -1,0 +1,17 @@
+<div class="post-archive__item archive-type-<%= post.layout %>">
+    <%- partial('post/date', {class_name: 'post-archive__time f12 post-meta__time', date_format: 'YYYY-MM-DD'}) %>
+    <div class="border-spread">
+        <span class="border-spread__item spread-1"></span>
+        <span class="border-spread__item spread-2"></span>
+        <span class="border-spread__item spread-3"></span>
+    </div>
+    <% if (post.link){ %>
+        <a class="post-archive__title" href="<%- url_for(post.link) %>" target="_blank" itemprop="url"><%= post.title %></a>
+    <% } else if (post.title){ %>
+    <% if (index){ %>
+        <a class="post-archive__title" href="<%- url_for(post.path) %>"><%= post.title %></a>
+    <% } else { %>
+        <%= post.title %>
+    <% } %>
+    <% } %>
+</div>

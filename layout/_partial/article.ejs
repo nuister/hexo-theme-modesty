@@ -1,0 +1,57 @@
+<article id="<%= post.layout %>-<%= post.slug %>" class="post-article article-type-<%= post.layout %>" itemscope itemprop="blogPost">
+    <%- partial('post/title', {class_name: 'post-article__link'}) %>
+    <% if (theme.fancybox){ %>
+    <input type="hidden" class="isFancy"/>
+    <% } %>
+
+    <div class="post-meta">
+        <% if(post.noDate != "true"){ %>
+        发表于<%- partial('post/date', {class_name: 'post-meta__time', date_format: null}) %>
+        <% } %>
+        <i>|</i>
+        <span class="post-meta__tags">
+            <%- partial('post/tag') %>
+        </span>
+        <i>|</i>
+                <span class="post-meta__comment-count">
+                    <% if (!index){ %>
+                    <a id="<%- post.slug %>" href="#comments"></a>
+                    <% } else { %>
+                    <a id="<%- post.slug %>" href="<%- post.path %>#comments"></a>
+                    <% } %>
+                </span>
+    </div>
+    <div class="post-content content" itemprop="articleBody">
+        <% if (post.excerpt && index){ %>
+        <%- post.excerpt %>
+        <% } else { %>
+        <%- post.content %>
+        <% } %>
+        <% if (index){ %>
+        <div class="post-more-link">
+            <% if (post.excerpt && index){ %>
+            <a <% if (!theme.excerpt_link){ %>class="hidden"
+                    <% } %>
+               href="<%- url_for(post.path) %>#more"><%= theme.excerpt_link %></a>
+            <% } %>
+            <div class="clearfix"></div>
+        </div>
+        <% } %>
+    </div>
+    <% if (!index){ %>
+    <%- partial('post/nav') %>
+    <% } %>
+</article>
+<% if (!index && theme.share){ %>
+<%- partial('post/share') %>
+<% } %>
+<% if (!index && theme.duoshuo && post.comments){ %>
+<%- partial('post/duoshuo', {
+    key: post.slug,
+    title: post.title,
+    url: config.url + url_for(post.path)
+}) %>
+<% } %>
+
+
+

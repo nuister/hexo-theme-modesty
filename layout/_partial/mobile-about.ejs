@@ -1,0 +1,26 @@
+<div class="profile mobile">
+    <div class="profile__avatar">
+        <img class="profile__avatar__img" src="<%=theme.avatar%>" alt="头像"/>
+    </div>
+    <span class="profile__name"><%=theme.author%></span>
+    <% if (theme.subtitle){ %>
+    <span class="profile__sign"><%=theme.subtitle%></span>
+    <%}%>
+</div>
+<div class="social tc">
+    <% for (var i in theme.subnav){ %>
+    <span class="social__item">
+            <a href="<%- url_for(theme.subnav[i]) %>" target="_blank" title="<%= i %>">
+                <span class="fa fa-<%= i %>"></span>
+            </a>
+        </span>
+    <%}%>
+</div>
+<%if(theme.aboutme){%>
+<div class="aboutme-wrap">
+    <h5 class="tc">ABOUT ME</h5>
+    <div class="tc">
+        <%=theme.aboutme%>
+    </div>
+</div>
+<% } %>

@@ -1,0 +1,16 @@
+<%- partial('_partial/head', {cache: true}) %>
+<body>
+<%- partial('_partial/navigation', {cache: true}) %>
+<%- partial('_partial/mobile-nav', null, {cache: !config.relative_link}) %>
+    <div class="sidebar">
+        <%- partial('_partial/sidebar', null, {cache: !config.relative_link}) %>
+    </div>
+    <div class="body-wrap">
+        <div class="main-container">
+            <%- body %>
+        </div>
+    </div>
+<%- partial('_partial/footer', {cache: true}) %>
+<%- partial('_partial/after-footer') %>
+</body>
+</html>

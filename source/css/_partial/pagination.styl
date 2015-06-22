@@ -1,0 +1,24 @@
+$no-bottom
+  border-bottom: 0;
+  background-color: darken($grey, 5%);
+
+.pagination {
+  margin: 60px 0 0 0;
+  font-family: $font-en;
+  border-top: 1px #dddddd solid;
+  .current {
+    background-color: darken($grey, 5%);
+  }
+    a,.page-number{
+      margin: 0 6px 0 0;
+      padding: 4px 8px;
+      border-bottom: 0;
+      transition: all 0.2s ease-in-out;
+      &:hover{
+        @extend $no-bottom
+      }
+    }
+}
+.pagination__space{
+
+}

@@ -1,0 +1,151 @@
+@import "nib"
+@import "_variables"
+@import "_extend";
+@import "_partial/navigation";
+@import "_partial/sidebar";
+@import "_partial/article";
+@import "_partial/footer";
+@import "_partial/tagcloud";
+@import "_partial/pagination";
+@import "_partial/archive";
+@import "_partial/highlight";
+@import "font-awesome-stylus/stylus/font-awesome";
+@import "_partial/mobile-nav";
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("fonts/fontawesome-webfont.eot");
+  src: url("fonts/fontawesome-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/fontawesome-webfont.woff") format("woff"), url("fonts/fontawesome-webfont.ttf") format("truetype"), url("fonts/fontawesome-webfont.svgz#FontAwesomeRegular") format("svg"), url("fonts/fontawesome-webfont.svg#FontAwesomeRegular") format("svg");
+  font-weight: normal;
+  font-style: normal
+}
+
+global-reset()
+
+ol {
+  list-style: decimal;
+  padding-left: 20px;
+}
+
+ul {
+  list-style: none;
+}
+
+input, button
+  margin: 0
+  padding: 0
+  &::-moz-focus-inner
+    border: 0
+    padding: 0
+
+
+html, body, #container
+  height: 100%
+
+body
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  background: #fff;
+  color: #5b5b5b;
+  -webkit-overflow-scrolling: touch
+
+h1, h2, h3 {
+  display: block;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 1.5em
+  margin: 0.5em 0
+}
+
+h2 {
+  font-size: 1.3em
+}
+
+h3 {
+  font-size: 1.1em
+}
+
+h4, h5, h6 {
+  font-size: 1em
+}
+
+a {
+  text-decoration: none;
+  outline-width: 0;
+  color: #258fb8;
+  outline: none;
+}
+
+.alignleft {
+  float: left
+}
+
+.alignright {
+  float: right
+}
+
+@media screen and (max-width: 1040px) {
+  .inner {
+    width: 100%
+  }
+}
+
+
+.nb, .fancybox-close {
+  border-bottom: 0;
+  &:hover {
+    border-bottom: 0;
+  }
+}
+
+.w700 {
+  width: 700px;
+}
+
+.tc {
+  text-align: center;
+}
+
+.f12 {
+  font-size: 12px;
+}
+
+body {
+  font-family: $font-zh;
+  line-height: $base-line-height;
+  -webkit-font-smoothing: antialiased;
+  text-align: justify;
+  font-size: 14px;
+  color: $darken-grey;
+  padding: 0;
+}
+
+::-moz-selection { color: #FFFFFF;  background: #333333; }
+::selection      { color: #FFFFFF;  background: #333333; }
+
+.body-wrap {
+  min-height: 500px;
+  @media mq-mobile {
+  margin: 4.6em 1em 0;
+  }
+}
+
+a {
+  color: $link-color;
+  border-bottom: 1px $lighten-grey dotted;
+  text-decoration: none;
+  &:hover {
+    border-bottom: 1px $darken-grey solid;
+  }
+}
+
+body {
+  margin: 0;
+  height: 100%;
+}
+
+if sidebar
+  @import "_partial/sidebar"
