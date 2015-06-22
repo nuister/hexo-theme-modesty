@@ -7,4 +7,7 @@ modesty 是为 [hexo](https://github.com/tommy351/hexo) 2.4+制作的主题。
 关于主题：
 
 参考[next](https://github.com/iissnan/hexo-theme-next)主题进行个人想法的扩展。next是个制作精良的主题。
-              
+#使用
+```shell
+$ git clone https://github.com/gary-Shen/hexo-theme-modesty themes/modesty
+```
