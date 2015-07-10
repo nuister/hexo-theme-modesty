@@ -12,8 +12,8 @@
 <% } %>
 <% } else { %>
 <% var last, current_tag = page.path.substring(5, page.path.substring(5).indexOf('/') + 5); %>
-<div class="body-wrap page-archive">
-    <div class="main-container">
+<div class="page-archive">
+    <!--<div class="main-container">-->
         <% page.posts.each(function(post, i){ %>
         <% var year = post.date.year();%>
         <% if (last != year){ %>
@@ -34,7 +34,7 @@
         <%- partial('archive-post', {post: post}) %>
         <% }) %>
         <% if (page.posts.length){ %>
-    </div>
+    <!--</div>-->
     <% if (page.total > 1){ %>
     <nav id="page-nav" class="pagination">
         <%- paginator({
