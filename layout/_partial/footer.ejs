@@ -15,7 +15,9 @@
         var thread_key = [];
         articleId.each(function(i, e){
             thread_key[i] = $(e).attr('id');
+            console.log(thread_key[i]);
         });
+
         var comment_count_url = 'http://api.duoshuo.com/threads/counts.jsonp?short_name=<%- theme.duoshuo %>&threads=' + thread_key.join(',') + '&callback=?';
         $.ajax({
             dataType: "jsonp",
