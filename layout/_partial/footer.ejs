@@ -2,32 +2,11 @@
 <footer class="footer">
     <div class="footer-inner">
         <div class="footer-inner__copyright">&copy; <%= date(new Date(), 'YYYY') %>
-            <a target="_blank" href="https://github.com/gary-Shen/hexo-theme-modesty">modesty</a> by <a href="https://github.com/gary-Shen" target="_blank">gary-Shen</a>
+            <a class="nb" target="_blank" href="https://github.com/gary-Shen/hexo-theme-modesty">modesty</a> by <a class="nb" href="https://github.com/gary-Shen" target="_blank">gary-Shen</a>
         </div>
         <div class="footer-inner__author">
-            <a target="_blank" href="http://hexo.io/">Hexo</a> theme
+            <a class="nb" target="_blank" href="http://hexo.io/">Hexo</a> theme
         </div>
     </div>
 </footer>
-<script>
-    $(function () {
-        var articleId = $('.post-meta__comment-count a');
-        var thread_key = [];
-        articleId.each(function(i, e){
-            thread_key[i] = $(e).attr('id');
-            console.log(thread_key[i]);
-        });
-
-        var comment_count_url = 'http://api.duoshuo.com/threads/counts.jsonp?short_name=<%- theme.duoshuo %>&threads=' + thread_key.join(',') + '&callback=?';
-        $.ajax({
-            dataType: "jsonp",
-            url: comment_count_url,
-            success: function(res){
-                $.each(res.response, function (i, e) {
-                    $('#' + e.thread_key).text(e.comments + '条评论');
-                })
-            }
-        })
-    })
-</script>
 <!--底部 end-->

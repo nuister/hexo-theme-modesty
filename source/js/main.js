@@ -95,7 +95,7 @@ $(function () {
                     height: mnwrapHeight + 'px'
                 }, mobileNavAnimation.speed, function () {
                     navList.fadeIn(mobileNavAnimation.speed);
-                });
+                }).show();
 
                 mobileNavAnimation.visible = true;
             } else {

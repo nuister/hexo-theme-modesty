@@ -270,16 +270,22 @@ $spread3-pYl: 0px;*/
 
 .page-archive {
     position: relative;
-    padding-bottom: 10px;
     border-top: #ddd solid 2px;
     margin-top: 24px;
+  background-color: #fff;
+  padding: 0 20px 20px;
+  border-radius: 2px;
+  box-shadow: 0 1px 1px 0 rgba(0,0,0,0.25);
     &::before {
       content: " ";
       position: absolute;
       background-color: #dddddd;
       height: 100%;
       width: 2px;
-      left: 92px;
+      left: 112px;
+      @media mq-mobile{
+        left: 106px;
+      }
     }
       &>h2{
         position: absolute;
@@ -290,11 +296,13 @@ $spread3-pYl: 0px;*/
 
       }
         @media mq-mobile{
-    margin-top: 8em;
+          margin-top: 3em;
+          padding: 0 1em 2em;
         }
-  @media mq-tablet{
-  margin-top: 8em;
-}
+        @media mq-tablet{
+          margin-top: 3em;
+          padding: 0 10px 20px;
+        }
 }
 
 .post-archive__title {
